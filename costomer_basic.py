@@ -1,6 +1,9 @@
 import re
-custlist=[{'name': 'honggildong', 'gender': 'M', 'email': 'a@gmail.com', 'birthyear': '2000'}]
-page=-1
+custlist=[{'name': 'honggildong', 'gender': 'M', 'email': 'a@gmail.com', 'birthyear': '2000'},
+          {'name': 'honggildong', 'gender': 'M', 'email': 'a@gmail.com', 'birthyear': '2000'},
+          {'name': 'honggildong', 'gender': 'M', 'email': 'a@gmail.com', 'birthyear': '2000'},
+          {'name': 'honggildong', 'gender': 'M', 'email': 'a@gmail.com', 'birthyear': '2000'}]
+page=3
 
 
 while True:
@@ -39,6 +42,9 @@ while True:
                 customer['birthyear'] = int(customer['birthyear'])
                 break
         print(customer)
+        custlist.append(customer)
+        print(custlist)
+        page = len(custlist)-1
     elif choice=="C":
         print("현재 고객 정보 조회")
     elif choice == 'P':
